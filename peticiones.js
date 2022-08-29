@@ -37,10 +37,9 @@ puuidsPlayers.forEach(element => {
 
     fetch(`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/${people}?api_key=${key}`)
         .then((response) => response.json())
-        .then ((data) => datosPlayer.push([`Summoner:${data[0].summonerName}`,`wins:${data[0].wins}`, `losses:${data[0].losses}`,`LP:${data[0].leaguePoints}`, `ELO:${data[0].tier+' '+data[0].rank}`]));
+        .then ((data) => datosPlayer.push([`Summoner:${data[0].summonerName}`,`wins:${data[0].wins}`, `losses:${data[0].losses}`, `ELO:${data[0].tier+' '+data[0].rank}`,`LP:${data[0].leaguePoints}`]));
 });
 console.log(datosPlayer)
-
     
 };
 
