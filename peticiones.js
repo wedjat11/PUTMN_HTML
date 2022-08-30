@@ -1,6 +1,6 @@
 
 
-const key = 'RGAPI-1f6fd6c4-5279-4484-87a7-c6f4ce128d35' ;
+const key = 'RGAPI-40ec86a4-d858-49bb-af90-a680a8265f11' ;
 
 const puuidsPlayers= [];
 const datosPlayer=[];
@@ -37,9 +37,27 @@ puuidsPlayers.forEach(element => {
 
     fetch(`https://la1.api.riotgames.com/lol/league/v4/entries/by-summoner/${people}?api_key=${key}`)
         .then((response) => response.json())
-        .then ((data) => datosPlayer.push([`Summoner:${data[0].summonerName}`,`wins:${data[0].wins}`, `losses:${data[0].losses}`, `ELO:${data[0].tier+' '+data[0].rank}`,`LP:${data[0].leaguePoints}`]));
+        .then ((data) => datosPlayer.push([`Summoner:${data[0].summonerName}`,`wins:${data[0].wins}`, `losses:${data[0].losses}`, `ELO:${data[0].tier+' '+data[0].rank}`,`LP:${data[0].leaguePoints}`]))
 });
 console.log(datosPlayer)
+
+
+    // document.getElementById('contabla').style.backgroundColor = 'red'
+    let tr = document.createElement('tr')
+
+    let th = document.createElement('th')
+
+    let td = document.createElement('td')
+
+    document.getElementById('contabla').appendChild(tr).appendChild(th).appendChild(td)
     
+
+    th.innerHTML = '4';
+
+    td.innerHTML = 'name';
+
+    
+
+
 };
 
