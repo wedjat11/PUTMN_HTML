@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     
 
     <link rel="stylesheet" href="normalize.css">
@@ -16,64 +17,41 @@
     
     <title>Document</title>
 </head>
-<body>
+<body onload="complete()">
     <nav id='menu'>
         <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
         <ul>
             <li><a class="letraChida"href='./index.html'>PUTMN</a></li>
-            <li><a href='./stats.html'>Stats</a></li>
-            <li><a href='./contact.html'>Contact </a></li>
+            <li><a class="letraNormal" href='./stats.html'>Stats</a></li>
+            <li><a class="letraNormal" href='./contact.html'>Contact </a></li>
         </ul>
     </nav> 
+    <div class="d-flex justify-content-center" id="loader">
+        <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
     <div class="container container-fluid">
         <div class="CenterPr">
-            <table class="table-primary">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Victorias</th>
-                        <th scope="col">Derrotas</th>
-                        <th scope="col">Win Rate</th>
-                        <th scope="col">ELO</th>
-                        <th scope="col">LP</th>
-                        <th scope="col">Desafio</th>
-                        <th scope="col">Historial</th>
-                    </tr>
-                </thead>
-                <tbody  id="contabla">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>${datosPlayers}</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
+            <table class="table-primary" id="tablita" >
+                
             </table>
         </div>
         <div class="LeftPr">
-            <h1> <button class="btn btn-primary" onclick="namePlayers()">puchale</button></h1>
+            
         </div>
         <div class="RightPr">
-            <button class="btn btn-primary" onclick="dataPlayers()">puchale</button>
+            
         </div>
     </div>
+    
+
 
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./peticiones.js"></script>
+<script src="./loader.js"></script>
 </body>
 
 </html>

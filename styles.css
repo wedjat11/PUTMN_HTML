@@ -1,7 +1,10 @@
 body{
     background: #000;
 }
+.letraNormal, td {
+	font-family: 'Rubik', sans-serif;
 
+}
 .letraChida, th{
 	font-family: 'Silkscreen', cursive;
 	background: -webkit-linear-gradient(#9A7734,#F3E59B);
@@ -113,16 +116,15 @@ body{
 }
 
 /*grid principal*/
-.container {  display: grid;
-    grid-template-columns: 0.5fr 1.5fr 0.5fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-    "LeftPr CenterPr RightPr";
+.container {
+	background-color: #FFF;
+	display: grid; 
+	grid-template-columns: 10% 80% 10%; 
+	grid-template-rows: 1fr; 
+	gap: 0px 2px; 
+	grid-template-areas: 
+	"LeftPr CenterPr RightPr"; 
 }
-
-
 .CenterPr { grid-area: CenterPr; }
 .LeftPr { grid-area: LeftPr; }
 .RightPr { grid-area: RightPr; }
@@ -170,5 +172,7 @@ Estilos de la segunda pagina
 	color: #F2F2F2;
 	width: 100%;
 }
+
+/*loader*/
 
 
